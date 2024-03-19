@@ -1,9 +1,8 @@
-package com.julia.firstapp
+package com.julia.firstapp.view
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import com.julia.firstapp.databinding.ActivityMainBinding
-import com.julia.firstapp.databinding.LinearlayoutBinding
 import java.time.LocalDateTime
 
 class MainActivity : AppCompatActivity() {
@@ -26,22 +25,5 @@ class MainActivity : AppCompatActivity() {
 //            binding.tvIdade.text="Idade: +{idade}"
 //
 //        }
-        binding.btnEnviar.setOnClickListener {
-            var email = binding.edtEmail.editableText.toString()
-
-            if (email.contains("@") && email.substringAfter("@").contains(".com")) {
-                binding.tvEmail.text = "Email: ${email}"
-            } else {
-                binding.tvEmail.text = "Email: Error"
-            }
-
-            var telefone = binding.edtTelefone.editableText.toString()
-
-            if (telefone.length == 11) {
-                binding.tvTelefone.text = "Telefone: ${telefone}"
-            } else {
-                binding.tvTelefone.text = "Telefone: Error"
-            }
-    }
 }
 }
